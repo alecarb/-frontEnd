@@ -1,0 +1,21 @@
+{
+    "nombre":"Alejandra",
+    "apellido":"Carballeira",
+
+    "navbar":
+        {   
+            "logo-AP":"../asset/images/APLogo-20-20.png",
+            "red1":"", 
+            "red2":"",
+            "red3":""
+        },
+        
+    "banner":{
+        "imagen_banner":"../asset/images/banner.png"
+    }
+
+
+
+
+
+}

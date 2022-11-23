@@ -1,0 +1,9 @@
+.error{
+    height:100vh;
+    background-color: gray;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+ }
+ .error a{
+    text-decoration: none;
+ }
+ 

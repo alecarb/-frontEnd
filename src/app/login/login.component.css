@@ -1,0 +1,21 @@
+.login{
+    height: 87vh;
+ }
+ .adm a{
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: #000;
+ }
+ .adm:hover{
+    transform: scale(1.3); 
+ }
+ .perfil-panel{
+    width: 80%;
+ }
+ .perfil-panel:hover{
+   transform: scale(1.3);
+ }
+ h4:hover{
+    transform: scale(1.3);
+ }
+ 
