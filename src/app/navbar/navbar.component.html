@@ -1,15 +1,15 @@
 <nav class="navbar navbar-expand-sm">
   <div class="container-fluid">
     <a class="navbar-brand" title="ArgProg">
-      <img width="150" height="80" src="../../assets/images/APLogo-20-20.png" alt="argProg">
+      <img class="w-25 p-3"  [src]="miPorfolio.logoAP" alt="argProg">
     </a>
-    <!--boton ejemplo ngIf-->
+    <!--boton ejemplo ngIf
     <button class="btn ejemplo" (click)="mostrarse()">esta/Noesta></button>
-
+    -->
     <ul class="list-group list-group-horizontal">
-      <li class="list-group-item"><a href="#"><i class="fa-brands fa-instagram fa-2x text-white"></i></a></li>
-      <li class="list-group-item"><a href="#"><i class="fa-brands fa-linkedin-in fa-2x text-white"></i></a></li>
-      <li class="list-group-item"><a href="#"><i class="fa-brands fa-github fa-2x text-white"></i></a></li>
+      <li class="list-group-item"><a [href]="miPorfolio.red1"><i class="fa-brands fa-instagram fa-2x text-white"></i></a></li>
+      <li class="list-group-item"><a [href]="miPorfolio.red2"><i class="fa-brands fa-linkedin-in fa-2x text-white"></i></a></li>
+      <li class="list-group-item"><a [href]="miPorfolio.red3"><i class="fa-brands fa-github fa-2x text-white"></i></a></li>
       <li class="list-group-item">
         <!-- btn login modal -->
         <a routerLink="/login">

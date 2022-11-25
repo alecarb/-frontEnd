@@ -1,21 +1,59 @@
-{
-    "nombre":"Alejandra",
+{   "nombre":"Alejandra",
     "apellido":"Carballeira",
+    "descripcion":"Desarrollador FullStack",
+    "frase":"Si puedes soñarlo, puedes programarlo",
+    "imgPerfil":"/assets/images/perfil1-modified.png",
+    "logoAP":"/assets/images/APLogo-20-20.png",
+    "red1":"https://www.instagram.com/alecarb36/", 
+    "red2":"https://www.linkedin.com/in/alecarb36/",
+    "red3":"https://github.com/alecarb",
+    "ico":"/favicon.ico",
+    "educacion":[
+        {
+            "id":1,
+            "institucion":"UTN",
+            "titulo":"Técnico Universitario en Programación",
+            "inicio":"Febrero 2022",
+            "fin":"En curso",
+            "imgEst":"/assets/images/logo-utn.png"
 
-    "navbar":
-        {   
-            "logo-AP":"../asset/images/APLogo-20-20.png",
-            "red1":"", 
-            "red2":"",
-            "red3":""
         },
-        
-    "banner":{
-        "imagen_banner":"../asset/images/banner.png"
-    }
+        {
+            "id":2,
+            "institucion":"Centro de Estudiantes ITBA",
+            "titulo":"Curso de Analisis de Datos en Python",
+            "inicio":"Octubre 2021",
+            "fin":"Octubre 2021",
+            "imgEst":"/assets/images/itba2.png"
 
-
-
-
+        },
+        {
+            "id":3,
+            "institucion":"Centro de Estudiantes ITBA",
+            "titulo":"Curso de Introduductorio a la Programación en Python",
+            "inicio":"Octubre 2021",
+            "fin":"Octubre 2021",
+            "imgEst":"/assets/images/itba1.png"
+        },
+        {
+            "id":4,
+            "institucion":"Instituto Cambridge de Cultural Inglesa",
+            "titulo":"Profesorado Ingles",
+            "inicio":"Octubre 2015",
+            "fin":"En curso",
+            "imgEst":"/assets/images/cambridge.png"
+        }
+    ],
+    "proyectos":"Mis proyectos esta alojados en Github. Me oriento al lado BackEnd. Pero gracias a #YoProgramo me estoy capacitando en el Front.",
+    "imgProyecto":"/assets/images/Octocat.png",
+    "parrafo":[
+            {"id":1,"p":"Soy una mujer emprendedora me mantengo actualizada en las diferentes tecnologías."},
+            {"id":2,"p":"Me gusta la parte Backend pero gracias a Argentina Programa puede desarrollar satisfactoriamente el Front."},
+            {"id":3,"p":"Tengo buena predisposicion y soy proactiva."},
+            {"id":4,"p":"Estoy convencida que la retroalimentación es uno de los pilares fundamentales para el desarrollo positivo en el ámbito profesional tanto como en el personal"},
+            {"id":5,"p":"Poseo conocimientos en diferentes lenguajes como Python, Java, JavaScript y R."},
+            {"id":6,"p":"Con los cuales implemento los principales paradigmas de programación."},
+            {"id":7,"p":"Programación orientada objetos y Programación Imperativa y Funcional."}
+    ]
 
 }

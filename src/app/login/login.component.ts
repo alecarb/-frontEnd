@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+//Importamos las librerias de formulario que vamos a necesitar
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -6,10 +8,56 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  form: FormGroup = new FormGroup({
+    email: new FormControl(''),
+    password: new FormControl('')
+  });
+  submitted = false; //submitted/enviado
+  //Inyectar el constructor en el formBuilder
+  constructor(private formBuilder: FormBuilder) {    
 
-  constructor() { }
+    //Creamos el grupo de controles para el formulario de login
+    this.form=this.formBuilder.group({
+      password:['',[Validators.required, Validators.minLength(5), Validators.maxLength(8)]],
+      email:['',[Validators.required, Validators.email]]
+    })
+   }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  get Password(){
+    return this.form.get("password");
+  }
+ 
+  get Mail(){
+   return this.form.get("email");
   }
 
+  get PasswordValid(){
+    return this.Password?.touched && !this.Password?.valid;
+  }
+
+  get MailValid() {
+    return false
+  }
+
+  onEnviar(event: Event){
+    // Detenemos la propagación o ejecución del compotamiento submit de un form
+    event.preventDefault; 
+ 
+    if (this.form.valid){
+      // Llamamos a nuestro servicio para enviar los datos al servidor
+      // También podríamos ejecutar alguna lógica extra
+      alert("Todo salio bien ¡Enviar formuario!")
+    }else{
+      // Corremos todas las validaciones para que se ejecuten los mensajes de error en el template     
+      this.form.markAllAsTouched(); 
+      alert("Los datos ingresados no son validos")
+    }
+ 
+  }
+
+    
 }
+
+

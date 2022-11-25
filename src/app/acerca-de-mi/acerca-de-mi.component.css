@@ -10,21 +10,10 @@
     margin-top: 2rem;
     
  }
-
+ .logo-seccion{
+    padding: 1rem;
+ }
  .text-seccion{
-    margin: 2rem;
+    margin-left: 2rem;
     
  }
-
- span{
-    text-align: justify;
- }
- 
- label {
-    padding-right: 1rem;
-    padding-top: 1rem;
-    margin-left: 2rem;
-    font-size: 1rem;
-   
- }
- 

@@ -1,45 +1,17 @@
     <!--estudios-->
     <div class="seccion sombra">
-        <h3>Formacion</h3>
-        <!--1-->
+        <h2 class="titulo seccion sombra">{{formacion}}</h2>
      <div class="estudio">
+    <!--1-->
         <div class="logo-seccion">
-            <img src="../../assets/images/logo-utn.png" alt="logo-utn" class="utn">
         </div>
-        <div class="text-seccion">
-            <span>
-            <b>Universidad Tecnológica Nacional (UTN)</b><br>
-            Técnico Universitario en Programación<br>
-            Fecha estimada de finalización: Diciembre 2023.<br>
-            Segundo semestre en curso.
+        <div *ngFor="let educacion of educacionList" class="text-seccion">
+            <span class>
+            <img [src]="educacion.imgEst" [alt]="educacion.institucion" class="educacion">
+            <b><h2 class="mt-4">{{educacion.institucion}}</h2></b>
+            <p>{{educacion.titulo}}</p>
+            <p>{{'Inicio: '+educacion.inicio+' /Finalizacion: '+educacion.fin}}</p>
             </span>
-        </div>
-        <!--2-->
-        <div class="logo-seccion">
-            <img src="../../assets/images/se-programar.png" alt="se-programar" class="utn">
-        </div>
-        <div class="text-seccion">
-            <p>Cursada y aprobada la primera etapa de Argentina Programa.<br>Fecha de finalizacion 13 de abril de 2022</p>
-        </div>
-          <!--3-->
-        <div class="logo-seccion">
-            <img src="../../assets/images/itba2.png" alt="itba2" class="utn">
-        </div>
-        <div class="text-seccion">
-            <p>Curso de Analisis de Datos en Python. Fecha de finalización Octubre 2021</p>
-        </div>
-        <!--4-->
-        <div class="logo-seccion">
-            <img src="../../assets/images/itba1.png" alt="itba1" class="utn">
-        </div>
-        <div class="text-seccion">
-            <p>Curso de Introduductorio a la programacion en Python. Fecha de finalización Agosto 2021</p>
-        <!--5-->
-        <div class="logo-seccion">
-            <img src="../../assets/images/cambridge.png" alt="ingles" class="utn">
-        </div>
-        <div class="text-seccion">
-            <p>Cursado y aprobado el 3er año de Ingles. Instituto Cambridge CABA</p>
         </div>
     </div>
 

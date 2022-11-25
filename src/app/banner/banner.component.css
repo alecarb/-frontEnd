@@ -1,12 +1,11 @@
 .banner {
-  /*background-image: url(../../assets/images/banner.png)
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100vh;
-    height: 100vh;
-    position: absolute;
-    ;*/
- }
+  background-image: url(../../assets/images/banner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 35rem;
+  position: relative;
+  margin-bottom: 2rem;
+}
  .about-container{
     position: absolute;
     width: 100%;
@@ -26,11 +25,40 @@
     height: 10rem;
  }
  .perfil{
+   /*
    border-radius: 50%;
    width: 12rem;
    height: 12rem;
+   */
+   border-radius: 50%;
+   width: 12rem;
+   height: 12rem;
+   margin-top: 3rem;
+   margin-left: -6.5rem;
+   
+
+}
+.text{
+   color: #FFF;
+   display: flex;
+   flex-direction: column;
+   align-items:center;
+   justify-content: center;
+   margin-top: 5rem;
+   margin-left: -30rem;
+  
+}
+.text h1{
+   font-size: 3rem;
+}
+.text h2{
+   font-size: 2rem;
+}
+.text p{
+   font-size: 1rem;
 }
 
+/*
  .text{
     color: #FFF;
     display: flex;
@@ -40,6 +68,7 @@
     margin-top: 5rem;
     margin-left: -30rem;
    
+ 
  }
-
+  */
 

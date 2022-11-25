@@ -1,15 +1,13 @@
-
- <div class="banner">
+<section class="banner">
     <div class="about-container ">
-        <img src="../../assets/images/banner.png">
             <div class="image">                               
-                <img src="../../assets/images/perfil1-modified.png" alt="perfil" class="perfil">
+                <img [src]="miPorfolio.imgPerfil" alt="" class="perfil">
             </div>
             <div class="text">
-                <h1>Alejandra Carballeira</h1>
-                    <h2>Desarrollador Full-Sack</h2>
-                    <p>Si puedes soñarlo, puedes programarlo.</p>
-            </div>
+                <h1>{{miPorfolio.nombre + " "+ miPorfolio.apellido}}</h1>
+                <h2>{{miPorfolio.descripcion}}</h2>
+                <p>{{miPorfolio.frase | uppercase}}</p>
+                </div>
     </div>
-</div>
+</section>
 

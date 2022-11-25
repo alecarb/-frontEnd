@@ -6,10 +6,7 @@
     background-color: #FFF;
     
  }  
- .seccion{
-    margin-top: 2rem;
-    
- }
+ 
  .logo-seccion{
     padding: 1rem;
  }
@@ -19,16 +16,20 @@
  }
  .utn{
     width: 10rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     
  }
+ .logo-seccion{
+   padding: 1rem;
+}
+.educacion{
+   width: 10rem;
+}
  span{
     text-align: justify;
  }
- 
- label {
-    padding-right: 1rem;
-    margin-left: 2rem;
-    font-size: 1rem;
-   
+ .titulo{
+   margin-left: 2rem;
  }
  
