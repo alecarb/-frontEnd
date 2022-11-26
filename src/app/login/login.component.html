@@ -3,9 +3,10 @@
   <form [formGroup]="form"  (ngSubmit)="onEnviar($event)">   
   <div class="container text-center">
     <div class="row">
+      <div class="col-2">
+      </div>
       <div class="col-8 p-5">
         <div class="modal-body">
-          
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Email</label>
               <input type="email" formControlName="email" class="form-control" [class.border-danger]="MailValid" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -24,16 +25,13 @@
       
             <div class="modal-footer">
               <a routerLink="/registro" >
-               <button type="submit" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#registro">Registrame</button>
+               <button type="submit" class="btn btn-secondary me-md-2" data-bs-toggle="modal" data-bs-target="#registro">Registrame</button>
              </a>
                <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
              </div>
              <div><a routerLink="/index">Inicio</a></div>
-          
-
         </div>
       </div>
-    
     </div>
   </div>
 </form>

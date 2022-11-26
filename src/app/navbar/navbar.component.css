@@ -1,6 +1,6 @@
 nav{
     background-color:black;
-    max-height: 4.5rem;
+    max-height: 6rem;
   
     
  }
@@ -47,4 +47,8 @@ nav{
 .a{
    text-decoration: none;
 
+}
+.img_logo{
+  width: 8em;
+  height: 5em;
 }
