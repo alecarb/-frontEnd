@@ -3,53 +3,20 @@
         <div class="container">
             <div class="col">
                 <div class="row">
-                    <h3 class="seccion sombra">Hard Skills</h3>
-                    <label for="file">HTML5:</label>
-                    <progress id="file" max="100" value="70"></progress>
+                    <h3 class="seccion sombra">{{tituloHard}}</h3>
+                    <div *ngFor="let skill of hardSkillList">
+                    <label for="file">{{skill.habilidad + ":"}}</label>
+                    <progress id="file" max="100" [value]="skill.porcentaje"></progress>
                     <br>
-                    <label for="file">CSS/Bootstarp:</label>
-                    <progress id="file" max="100" value="50"></progress>
-                    <br>
-                    <label for="file">Python:</label>
-                    <progress id="file" max="100" value="90"></progress>
-                    <br>
-                    <label for="file">JavaScript:</label>
-                    <progress id="file" max="100" value="60"></progress>
-                    <br>
-                    <label for="file">JAVA:</label>
-                    <progress id="file" max="100" value="90"></progress>
-                    <br>
-                    <label for="file">Git/GitHub</label>
-                    <progress id="file" max="100" value="90"></progress>
-                    <br>
-                    <label for="file">Angular</label>
-                    <progress id="file" max="100" value="90"></progress>
-                    <br>
-                    <label for="file">R/R Studio</label>
-                    <progress id="file" max="100" value="60"></progress>  
+                    </div>
                 </div>
-                <div class="row mt-5">
-                    <h3 class="col seccion sombra">Soft Skills</h3>
-                    <label for="file">Creatividad e iniciativa:</label>
-                    <progress id="file" max="100" value="90"></progress>
+                <div class="row">
+                    <h3 class="col seccion sombra"> {{tituloSoft}}</h3>
+                    <div *ngFor="let skill of softSkillList">
+                    <label for="file">{{skill.habilidad + ":"}}</label>
+                    <progress id="file" max="100" [value]="skill.porcentaje"></progress>
                     <br>
-                    <label for="file">Aprendizaje activo:</label>
-                    <progress id="file" max="100" value="90"></progress>
-                    <br>
-                    <label for="file">Sentido de liderazgo:</label>
-                    <progress id="file" max="100" value="80"></progress>
-                    <br>
-                    <label for="file">JavaScript:</label>
-                    <progress id="file" max="100" value="60"></progress>
-                    <br>
-                    <label for="file">Gestión de personas:</label>
-                    <progress id="file" max="100" value="70"></progress>
-                    <br>
-                    <label for="file">Capacidad para trabajar en equipo:</label>
-                    <progress id="file" max="100" value="90"></progress>
-                    <br>
-                    <label for="file">Angular</label>
-                    <progress id="file" max="100" value="60"></progress>  
+                    </div>
                 </div>
             </div>
 

@@ -44,7 +44,7 @@
             "imgEst":"/assets/images/cambridge.png"
         }
     ],
-    "proyectos":"Mis proyectos esta alojados en Github. Me oriento al lado BackEnd. Pero gracias a #YoProgramo me estoy capacitando en el Front.",
+    "proyectos":"Haciendo click en la imagen del Octogato se podran visualizar los proyectos.",
     "imgProyecto":"/assets/images/Octocat.png",
     "parrafo":[
             {"id":1,"p":"Soy una mujer emprendedora me mantengo actualizada en las diferentes tecnologías."},
@@ -54,6 +54,79 @@
             {"id":5,"p":"Poseo conocimientos en diferentes lenguajes como Python, Java, JavaScript y R."},
             {"id":6,"p":"Con los cuales implemento los principales paradigmas de programación."},
             {"id":7,"p":"Programación orientada objetos y Programación Imperativa y Funcional."}
+    ],
+    "hard_skills":[
+        {
+            "id":1,
+            "habilidad":"HTML",
+            "porcentaje":90
+        },
+        {
+            "id":2,
+            "habilidad":"CSS/Bootstrap",
+            "porcentaje":70 
+        },
+        {
+            "id":3,
+            "habilidad":"Python",
+            "porcentaje":90
+        },
+        {
+            "id":4,
+            "habilidad":"JavaScript",
+            "porcentaje":70
+        },
+        {
+            "id":5,
+            "habilidad":"Java",
+            "porcentaje":90
+        },
+        {
+            "id":6,
+            "habilidad":"Git y GitHub",
+            "porcentaje":80
+        },
+        {
+            "id":7,
+            "habilidad":"Angular",
+            "porcentaje":70
+        },
+        {
+            "id":8,
+            "habilidad":"R y Studio",
+            "porcentaje":60
+        }
+
+    ],
+    "soft_skills":[
+        {
+            "id":1,
+            "habilidad":"Creatividad e Iniciativa",
+            "porcentaje":90
+        },
+        {
+            "id":2,
+            "habilidad":"Aprendizaje activo",
+            "porcentaje":90
+        },
+        {
+            "id":3,
+            "habilidad":"Sentido de liderazgo",
+            "porcentaje":90
+        },
+        {
+            "id":4,
+            "habilidad":"Gestión de personas",
+            "porcentaje":80
+        },
+        {
+            "id":5,
+            "habilidad":"Capacidad para trabajar en equipo",
+            "porcentaje":90
+        }
     ]
+        
+        
+    
 
 }
