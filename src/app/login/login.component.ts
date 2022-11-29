@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 //Importamos las librerias de formulario que vamos a necesitar
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -14,13 +14,13 @@ export class LoginComponent implements OnInit {
   });
   submitted = false; //submitted/enviado
   //Inyectar el constructor en el formBuilder
-  constructor(private formBuilder: FormBuilder) {    
+  constructor(private formBuilder: FormBuilder, private router: Router) {    
 
     //Creamos el grupo de controles para el formulario de login
     this.form=this.formBuilder.group({
-      password:['',[Validators.required, Validators.minLength(5), Validators.maxLength(8)]],
+      password:['',[Validators.required, Validators.maxLength(8)]],
       email:['',[Validators.required, Validators.email]]
-    })
+    });
    }
 
   ngOnInit(): void {}
@@ -49,10 +49,13 @@ export class LoginComponent implements OnInit {
       // Llamamos a nuestro servicio para enviar los datos al servidor
       // También podríamos ejecutar alguna lógica extra
       alert("Todo salio bien ¡Enviar formuario!")
+      this.router.navigate(['/dashboard']) //esta linea de codigo redirecciona al dashboard. Se importa el modulo Router y se agrrega al constructor.
+
     }else{
       // Corremos todas las validaciones para que se ejecuten los mensajes de error en el template     
       this.form.markAllAsTouched(); 
       alert("Los datos ingresados no son validos")
+      
     }
  
   }

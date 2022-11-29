@@ -8,11 +8,12 @@ import { PorfolioService } from '../servicios/porfolio.service';
 })
 export class EstudiosComponent implements OnInit{
   educacionList: any;
-  formacion: string = "Formacion";
+  titulo: string = "Formacion";
 
   constructor(private datosPorfolio:PorfolioService) { }
+  
   ngOnInit(): void{
-   this.datosPorfolio.obtenerDatos().subscribe(data =>{
+    this.datosPorfolio.obtenerDatos().subscribe(data =>{
     this.educacionList = data.educacion //educacion es el nombre del tag en el json tambien lo voy a usar como variable iteradora
     
    });

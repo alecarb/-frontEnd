@@ -1,0 +1,18 @@
+<div class="seccion sombra">
+    <h2 class="titulo seccion sombra">{{titulo}}</h2>
+ <div class="estudio">
+<!--1-->
+    <div class="logo-seccion">
+    </div>
+    <div *ngFor="let trabajo of trabajoList" class="text-seccion">
+        <span class>
+        <img [src]="trabajo.imagen" [alt]="trabajo.empresa" class="educacion">
+        <b><h2 class="mt-4">{{trabajo.empresa}}</h2></b>
+        <p>{{"Puesto: "+trabajo.puesto}}</p>
+        <p>{{trabajo.descripcion}}</p>
+        <p>{{'Inicio: '+trabajo.inicio+' / Finalizacion: '+trabajo.fin}}</p>
+        <p><a [href]="trabajo.url">{{trabajo.empresa}}</a></p>
+        </span>
+    </div>
+</div>
+

@@ -124,7 +124,31 @@
             "habilidad":"Capacidad para trabajar en equipo",
             "porcentaje":90
         }
+    ],
+    "trabajos":[
+        {
+            "id":1,
+            "empresa":"Hy Cite BA SRL",
+            "inicio":"11-2008",
+            "fin":"12-2010",
+            "puesto":"Data Entry",
+            "descripcion":"Me encargaba de la carga de datos al sistema de la empresa.",
+            "imagen":"/assets/images/HyCite_Logo_style_guide-03.jpg",
+            "url":"https://www.hycite.com/AR-Espanol"
+        },
+        {
+            "id":2,
+            "empresa":"Mudadora Independecia",
+            "inicio":"1-2012",
+            "fin":"actual",
+            "puesto":"co-titular, ventas, administracion",
+            "descripcion":"Primer contacto con el potencial cliente y presupuesto. Cierre de servicio. Administracion. ",
+            "imagen":"/assets/images/logoMI.jpg",
+            "url":"https://mudanzasindependencia.com.ar"
+        }
     ]
+
+    
         
         
     

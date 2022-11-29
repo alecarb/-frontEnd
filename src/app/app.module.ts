@@ -18,6 +18,8 @@ import { LoginComponent } from './login/login.component';
 import { Error404Component } from './error404/error404.component';
 import { RegistroComponent } from './registro/registro.component';
 import { AcercaDeMiComponent } from './acerca-de-mi/acerca-de-mi.component';
+import { ExperienciaLaboralComponent } from './experiencia-laboral/experiencia-laboral.component';
+
 
 @NgModule({
   declarations: [	
@@ -34,7 +36,8 @@ import { AcercaDeMiComponent } from './acerca-de-mi/acerca-de-mi.component';
     LoginComponent,
     Error404Component,
     RegistroComponent,
-    AcercaDeMiComponent
+    AcercaDeMiComponent,
+    ExperienciaLaboralComponent
      
    ],
   imports: [
@@ -42,7 +45,8 @@ import { AcercaDeMiComponent } from './acerca-de-mi/acerca-de-mi.component';
     AppRoutingModule,
     HttpClientModule, 
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+   
   ],
   bootstrap: [AppComponent],
   
