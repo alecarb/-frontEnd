@@ -21,9 +21,9 @@
 <div class="container ">
   <div class="row">
     <br>
-    <!--navbar redes-->
+    <!--botones redes-->
     <div class="col-3 col-sm-8 text-uppercase my-3">redes</div>
-    <div class="col-3 col-sm-2  my-3"><button  (click)="openModal()" type="button"  data-bs-toggle="modal" data-bs-target="#edit-redes"><i class="fa-solid fa-pen-to-square"></i></button></div>
+    <div class="col-3 col-sm-2  my-3"><button type="button"  data-bs-toggle="modal" data-bs-target="#edit-redes"><i class="fa-solid fa-pen-to-square"></i></button></div>
     <div class="col-3 col-sm-2  my-3"><button type="button"  data-bs-toggle="modal" data-bs-target="#redes"><i class="fa-solid fa-trash"></i></button></div>
     
     <!--Modal edit redes-->
@@ -38,14 +38,32 @@
             editar contenido
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-primary" (click)="doSomething()">Guardar</button>
+            <button type="button" class="btn btn-primary" >Guardar</button>
           </div>
         </div>
       </div>
     </div>
 
     <br>
-    <!-- Imagen Experiencia Laboral-->
+    <!--Modal delete redes-->
+    <div class="modal fade" id="redes" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Desea eliminar la seccion redes??
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Eliminar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!--  Experiencia Laboral-->
     <div class="w-100 d-none d-md-block"></div>
 
     <div class="col-3 col-sm-8 text-uppercase  my-3">Experiencia Laboral</div>
@@ -196,7 +214,7 @@
 
 
 <!--Modal edit Experiencia Laboral-->
-<div class="modal fade" id="edit-experinecia_laboral" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="edit-experiencia_laboral" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">

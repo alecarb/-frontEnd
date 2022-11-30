@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PorfolioService } from '../servicios/porfolio.service';
-declare var window: any; //2 instancio variable 
+//declare var window: any; //2 instancio variable -----> va a servir en el Backend <----
 
 @Component({
   selector: 'app-dashboard',
@@ -10,7 +10,7 @@ declare var window: any; //2 instancio variable
 })
 export class DashboardComponent implements OnInit {
   miPorfolio:any; 
-  formModal: any; //1 creo el atributo para el modal
+  //formModal: any; //1 creo el atributo para el modal
 
   constructor(private datosPorfolio: PorfolioService) { }
 
@@ -18,11 +18,13 @@ export class DashboardComponent implements OnInit {
     this.datosPorfolio.obtenerDatos().subscribe(data =>{
       this.miPorfolio= data;
     });
-    
-    //2 creo el objeto modal, le paso el id del modal
-    this.formModal = new window.bootstrap.Modal(
-      document.getElementById("edit-redes")
-    );
+  }
+
+  //----------- Esto me va a servir en el BackEnd -----------///
+    //2 creo el objeto modal, le paso el id del modal a utilizar
+    /*
+     this.formModal = new window.bootstrap.Modal(
+      document.getElementById("id"));
 
 
   }
@@ -33,8 +35,10 @@ export class DashboardComponent implements OnInit {
   doSomething(){ //5 creo otro metodo que se le asocia al boton del modal
     this.formModal.hide();
   }
+
   // luego en el html se colocan los metodos asociandolos 
   //al (click) esto en la etiqueta botton
   //openModal() va en el boton que abre
   //doSomething va en el boton del modal save change
+  */
 }
