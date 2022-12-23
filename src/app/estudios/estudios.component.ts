@@ -9,17 +9,18 @@ import { EducacionService } from '../service/educacion.service';
   styleUrls: ['./estudios.component.css']
 })
 export class EstudiosComponent implements OnInit{
-  educacion: Educacion[] = []; //importo el modelo
+  educacionList :any;
+  //educacion: Educacion[] = []; //importo el modelo
   titulo: string = "Formacion";
 
   //contructor con el servicio de educacion (y el token, a posterior)
-  constructor(private educacionS: EducacionService, ){}
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
+  //constructor(private educacionS: EducacionService, ){}
+  //ngOnInit(): void {
+  //  throw new Error('Method not implemented.');
+  //}
 
   //Contructor para front con Json
-/*
+
   constructor(private datosPorfolio:PorfolioService) { }
   
   ngOnInit(): void{
@@ -29,5 +30,5 @@ export class EstudiosComponent implements OnInit{
    });
 
   }
-*/
+
 }

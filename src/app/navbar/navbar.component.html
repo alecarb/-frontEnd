@@ -12,11 +12,18 @@
       <li class="list-group-item"><a [href]="miPorfolio.red3"><i class="fa-brands fa-github fa-2x text-white"></i></a></li>
       <li class="list-group-item">
         <!-- btn login modal -->
-        <a routerLink="/login">
+        <<a routerLink="/login">
           <i
             class="fa-solid fa-user-lock fa-2x"
             data-bs-toggle="modal"
             data-bs-target="#loginModal"
+            *ngIf="!isDashboard"
+          ></i
+          ><i
+            class="fa-solid fa-user fa-2x"
+            data-bs-toggle="modal"
+            data-bs-target="#loginModal"
+            *ngIf="isDashboard"
           ></i
         ></a>
       </li>

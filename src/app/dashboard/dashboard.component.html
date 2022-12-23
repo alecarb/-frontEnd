@@ -1,23 +1,5 @@
 
-<nav class="navbar navbar-expand-sm">
-  <div class="container-fluid">
-    <a class="navbar-brand " title="ArgProg">
-      <img class="img_logo"  [src]="miPorfolio.logoAP" alt="argProg">
-    </a>
-    <!--boton ejemplo ngIf
-    <button class="btn ejemplo" (click)="mostrarse()">esta/Noesta></button>
-    -->
-        <!-- btn login modal -->
-        <a routerLink="/login">
-          <i
-            class="fa-solid fa-user fa-2x"
-            data-bs-toggle="modal"
-            data-bs-target="#loginModal"
-          ></i
-        ></a>
-  </div>
-</nav>
-
+<app-navbar></app-navbar>
 <div class="container ">
   <div class="row">
     <br>
@@ -288,25 +270,26 @@
 
 
 <!--Modal edit Skills-->
-<div class="modal fade" id="edit-skill" tabindex="-1" aria-labelledby="skill" aria-hidden="true">
+<div class="modal fade" id="skill" tabindex="-1" aria-labelledby="skill" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Edicion Skills</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        Editar contenido
+        <form [formGroup]="form">
+          <label>Habilidad:</label>
+          <input type="text" formControlName="habilidad">
+          <br>
+          <label>Porcentaje:</label>
+          <input type="number" formControlName="porcentaje">
+        </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary">Guardar</button>
       </div>
     </div>
   </div>
-</div>
-
-
-  
 </div>
 <app-footer></app-footer>
 
