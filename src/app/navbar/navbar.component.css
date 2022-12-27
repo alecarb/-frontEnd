@@ -52,3 +52,9 @@ nav{
   width: 8em;
   height: 5em;
 }
+
+.btn{
+  background-color: black;
+  border-radius: 20px;
+  color: white;
+}

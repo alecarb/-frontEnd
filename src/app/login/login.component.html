@@ -1,6 +1,8 @@
 <app-navbar></app-navbar>
+
+
 <section class="login ">
-  <form [formGroup]="form"  (ngSubmit)="onEnviar($event)">   
+  <form [formGroup]="loginForm"  (ngSubmit)="onSubmit()">   
   <div class="container text-center">
     <div class="row">
       <div class="col-2">
@@ -8,24 +10,20 @@
       <div class="col-8 p-5">
         <div class="modal-body">
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Email</label>
-              <input type="email" formControlName="email" class="form-control" [class.border-danger]="MailValid" id="exampleInputEmail1" aria-describedby="emailHelp">
-              <div *ngIf="Mail?.errors && Mail?.touched">    
-                <p *ngIf="Mail?.hasError('required')" class="error">El email es requerido.</p>
-                <p *ngIf="Mail?.hasError('email')" class="error">El formato del email debe ser válido.</p>
+              <label for="exampleInputEmail1" class="form-label">Usuario</label>
+              <input type="text" formControlName="nombreUsuario" class="form-control" [class.is-valid]="loginForm.get('nombreUsuario').valid" [class.is-invalid]="loginForm.get('nombreUsuario').invalid" id="nombreUsuario" aria-describedby="emailHelp">
+              <div *ngIf="loginForm.get('nombreUsuario').errors && loginForm.get('nombreUsuario').touched">    
+                <p *ngIf="loginForm.get('nombreUsuario').hasError('required')" class="error">El Nombre de Usuario es requerido.</p>
+                <p *ngIf="loginForm.get('nombreUsuario').hasError('nombreUsuario')" class="error">El formato del email debe ser válido.</p>
               </div>
             </div>
-
-    
-
             <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label">Contraseña</label>
               <input type="password" formControlName="password" class="form-control" id="exampleInputPassword1">
-              <div *ngIf="Password?.errors  && Password?.touched">
-                <p *ngIf="Password?.hasError('required')" class="error">El password es requerido.</p>
-                <p *ngIf="Password?.hasError('maxlength')" class="error">El password debe ser hasta 8 caracteres.</p>
+              <div *ngIf="loginForm.get('password').errors  && loginForm.get('password').touched">
+                <p *ngIf="loginForm.get('password').hasError('required')" class="error">El password es requerido.</p>
+                <p *ngIf="loginForm.get('password').hasError('maxlength')" class="error">El password debe ser hasta x caracteres.</p>
               </div>
-            
             </div>
       
             <div class="modal-footer">
@@ -41,4 +39,5 @@
   </div>
 </form>
 </section>
+
     <app-footer></app-footer>

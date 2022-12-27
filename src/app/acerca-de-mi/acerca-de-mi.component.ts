@@ -9,6 +9,7 @@ import { PorfolioService } from '../servicios/porfolio.service';
 export class AcercaDeMiComponent implements OnInit {
   titulo: string = "Acerca de Mi";
   parrafoList:any;
+  miPorfolio:any;
 
   constructor(private datosPorfolio:PorfolioService) { }
 

@@ -3,29 +3,15 @@
     <a class="navbar-brand " title="ArgProg">
       <img class="img_logo"  [src]="miPorfolio.logoAP" alt="argProg">
     </a>
-    <!--boton ejemplo ngIf
-    <button class="btn ejemplo" (click)="mostrarse()">esta/Noesta></button>
-    -->
+   
     <ul class="list-group list-group-horizontal">
       <li class="list-group-item"><a [href]="miPorfolio.red1"><i class="fa-brands fa-instagram fa-2x text-white"></i></a></li>
       <li class="list-group-item"><a [href]="miPorfolio.red2"><i class="fa-brands fa-linkedin-in fa-2x text-white"></i></a></li>
       <li class="list-group-item"><a [href]="miPorfolio.red3"><i class="fa-brands fa-github fa-2x text-white"></i></a></li>
       <li class="list-group-item">
-        <!-- btn login modal -->
-        <<a routerLink="/login">
-          <i
-            class="fa-solid fa-user-lock fa-2x"
-            data-bs-toggle="modal"
-            data-bs-target="#loginModal"
-            *ngIf="!isDashboard"
-          ></i
-          ><i
-            class="fa-solid fa-user fa-2x"
-            data-bs-toggle="modal"
-            data-bs-target="#loginModal"
-            *ngIf="isDashboard"
-          ></i
-        ></a>
+        <button type="button" class="login-btn"  (click)="login()" *ngIf="!isLoggedIn">INGRESO</button>
+        <button type="button" (click)="onLogOut()" *ngIf="isLoggedIn">CERRAR SESION</button>
+
       </li>
     </ul>
   </div>
