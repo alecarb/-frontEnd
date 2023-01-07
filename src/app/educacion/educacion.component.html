@@ -6,7 +6,6 @@
         </div>
         <div *ngFor="let educacion of educacionList" class="text-seccion">
             <span class>
-            <img [src]="educacion.image_est" [alt]="educacion.institucion" class="educacion">
             <b><h2 class="mt-4">{{educacion.institucion}}</h2></b>
             <p>{{educacion.titulo}}</p>
             <p>{{'Inicio: '+educacion.inicio+' /Finalizacion: '+educacion.fin}}</p>

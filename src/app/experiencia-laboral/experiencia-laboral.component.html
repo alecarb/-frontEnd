@@ -7,7 +7,6 @@
       </div>
       <div *ngFor="let trabajo of trabajoList" class="text-seccion">
         <span class>
-        <img [src]="trabajo.image_trab" [alt]="trabajo.empresa" class="educacion">
         <b><h2 class="mt-4">{{trabajo.empresa}}</h2></b>
         <p>{{"Puesto: "+trabajo.puesto}}</p>
         <p>{{trabajo.text_descrip}}</p>

@@ -8,7 +8,7 @@ import { RegistroComponent } from './registro/registro.component';
 import { EducacionComponent } from './educacion/educacion.component';
 import { AuthGuard } from './auth.guard';
 import { TrabajoEditComponent } from './modales-edicion/trabajo-edit/trabajo-edit.component';
-import { TrabajoDeleteComponent } from './modales-delete/trabajo-delete/trabajo-delete.component';
+import { TrabajoNewComponent } from './modales-new/trabajo-new/trabajo-new.component';
 
 const routes: Routes = [
   //constantes de rutas en orden de navegacion
@@ -16,7 +16,7 @@ const routes: Routes = [
   {path:'login', component: LoginComponent},
   {path:'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
   {path: 'dashboard/trabajoedit/:id', component: TrabajoEditComponent },
-  {path: 'dashbord/trabajodelete/:id', component: TrabajoDeleteComponent},
+  {path: 'dashboard/trabajonew/new', component: TrabajoNewComponent},
   {path:'registro', component: RegistroComponent},
   {path:'index', component: IndexComponent},
   {path: '**', component:Error404Component}

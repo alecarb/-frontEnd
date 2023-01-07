@@ -26,7 +26,7 @@ import { SoftSkillComponent } from './soft-skill/soft-skill.component';
 import { AuthGuard } from './auth.guard';
 import { DashboardExpLabComponent } from './dashboard/dashboard-exp-lab/dashboard-exp-lab.component';
 import { TrabajoEditComponent } from './modales-edicion/trabajo-edit/trabajo-edit.component';
-import { TrabajoDeleteComponent } from './modales-delete/trabajo-delete/trabajo-delete.component';
+import { TrabajoNewComponent } from './modales-new/trabajo-new/trabajo-new.component';
 
 
 @NgModule({
@@ -49,7 +49,8 @@ import { TrabajoDeleteComponent } from './modales-delete/trabajo-delete/trabajo-
     SoftSkillComponent,
     DashboardExpLabComponent,
     TrabajoEditComponent,
-    TrabajoDeleteComponent,
+    TrabajoNewComponent,
+
 
    
   

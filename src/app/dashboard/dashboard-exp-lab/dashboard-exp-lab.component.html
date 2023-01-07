@@ -2,18 +2,17 @@
 
 <div class="seccion">
     <div class="titulo">{{titulo}}
-    <button>Nueva Experincia</button></div>
+       <button [routerLink]="['trabajonew/new']" type="button" class="btn btn-secondary">Nueva Experincia</button>
+    </div>
     <table class="sombra">
         <tbody *ngFor="let trabajo of trabajoList; index as i">
         <tr class="trabajo-fila">
             <td>{{i + 1}}</td>
             <td>{{trabajo.empresa}}</td>
             <td>{{trabajo.puesto}}</td>
-            <td><button routerLink="trabajoedit/{{trabajo.id}}">Editar</button></td>
-            <td><button (click)="onDelete(trabajo.id)" >Eliminar</button></td>
+            <td><button routerLink="trabajoedit/{{trabajo.id}}" type="button" class="btn btn-primary" >Editar</button></td>
+            <td><button (click)="onDelete(trabajo.id)" type="button" class="btn btn-danger">Eliminar</button></td>
         </tr>
-        
-        </tbody>
     </table>
 </div>
 
