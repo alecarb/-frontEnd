@@ -6,8 +6,9 @@ export default class Persona {
   email: string;
   residencia: string;
   dni: number;
+  image_perfil: string;
 
-  constructor(id: number,nombre: string,apellido: string,telefono: string,email: string,residencia: string,dni: number
+  constructor(id: number,nombre: string,apellido: string,telefono: string,email: string,residencia: string,dni: number, image_perfil:string
   ) {
     this.dni = dni;
     this.nombre = nombre;
@@ -15,5 +16,6 @@ export default class Persona {
     this.telefono = telefono;
     this.email = email;
     this.residencia = residencia;
+    this.image_perfil = image_perfil;
   }
 }

@@ -1,4 +1,4 @@
-    <!--Hard Skills & Soft Skills-->
+    <!--Hard Skills-->
     <div class="seccion sombra ">
         <div class="container">
             <div class="col">
@@ -7,14 +7,7 @@
                     <div *ngFor="let skill of hardSkillList">
                     <label for="file">{{skill.habilidad + ":"}}</label>
                     <progress id="file" max="100" [value]="skill.porcentaje"></progress>
-                    <br>
-                    </div>
-                </div>
-                <div class="row">
-                    <h3 class="col seccion sombra"> {{tituloSoft}}</h3>
-                    <div *ngFor="let skill of softSkillList">
-                    <label for="file">{{skill.habilidad + ":"}}</label>
-                    <progress id="file" max="100" [value]="skill.porcentaje"></progress>
+                    {{skill.porcentaje + "%"}}
                     <br>
                     </div>
                 </div>

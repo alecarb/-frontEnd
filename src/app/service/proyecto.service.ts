@@ -16,7 +16,7 @@ export class ProyectoService {
   }
 
   public getProyectos(): Observable<Proyecto[]> {
-    return this.httpClient.get<Proyecto[]>(`${this.baseURL}ver/proyectos`);
+    return this.httpClient.get<Proyecto[]>(`${this.baseURL}list`);
   }
 
   public createProyecto(proyecto: Proyecto): Observable<Proyecto> {

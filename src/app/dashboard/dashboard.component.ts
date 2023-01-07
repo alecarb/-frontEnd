@@ -1,8 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { PorfolioService } from '../servicios/porfolio.service';
-import { FormControl, FormGroup } from '@angular/forms';
-import { SoftSkillService } from '../service/soft-skill.service';
-//declare var window: any; //2 instancio variable -----> va a servir en el Backend <----
 
 @Component({
   selector: 'app-dashboard',
@@ -11,51 +7,8 @@ import { SoftSkillService } from '../service/soft-skill.service';
  
 })
 export class DashboardComponent implements OnInit {
-  miPorfolio:any; 
-  form: FormGroup;
-  habilidad: FormControl;
-  porcentaje: FormControl;
-  //formModal: any; //1 creo el atributo para el modal
-
-  constructor(private SoftskillsS: SoftSkillService){}
   
   ngOnInit(): void {
-    this.habilidad = new FormControl('');
-    this.porcentaje = new FormControl('');
-    this.form = new FormGroup({
-      habilidad: this.habilidad,
-      porcentaje: this.porcentaje
-    });
   }
 
-/*
-  constructor(private datosPorfolio: PorfolioService) { }
-
-  ngOnInit(): void {
-    this.datosPorfolio.obtenerDatos().subscribe(data =>{
-      this.miPorfolio= data;
-    });
-  }
-
-  //----------- Esto me va a servir en el BackEnd -----------///
-    //2 creo el objeto modal, le paso el id del modal a utilizar
-    /*
-     this.formModal = new window.bootstrap.Modal(
-      document.getElementById("id"));
-
-
-  }
-  openModal(){ //3 creo el metodo que le asociamos al boton para abrir el modal
-    this.formModal.show()
-  }
-  
-  doSomething(){ //5 creo otro metodo que se le asocia al boton del modal
-    this.formModal.hide();
-  }
-
-  // luego en el html se colocan los metodos asociandolos 
-  //al (click) esto en la etiqueta botton
-  //openModal() va en el boton que abre
-  //doSomething va en el boton del modal save change
-  */
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PorfolioService } from '../servicios/porfolio.service';
+import { HardSkillService } from '../service/hard-skill.service';
 
 @Component({
   selector: 'app-skills',
@@ -9,15 +9,16 @@ import { PorfolioService } from '../servicios/porfolio.service';
 export class SkillsComponent implements OnInit {
 
   hardSkillList: any;
-  softSkillList: any;
-  tituloSoft: string = "Soft Skills";
+ 
+ 
   tituloHard: string = "Hard Skills";
 
-  constructor(private datosPorfolio: PorfolioService ) { }
+  constructor(private datosPorfolio: HardSkillService ) { }
   ngOnInit(): void {
-    this.datosPorfolio.obtenerDatos().subscribe(data =>{
-      this.hardSkillList = data.hard_skills;
-      this.softSkillList = data.soft_skills;
+    this.datosPorfolio.getHardSkillsList().subscribe((data: any) =>{
+      this.hardSkillList = data;
+       
+      console.log(data);
     });
   }
 

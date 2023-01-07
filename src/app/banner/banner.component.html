@@ -1,13 +1,18 @@
 <section class="banner">
     <div class="about-container ">
-            <div class="image">                               
-                <img [src]="miPorfolio.imgPerfil" alt="" class="perfil">
-            </div>
+        <div *ngFor="let perfil of personas">
+            <div (click)="traerPerfil(perfil.id)"></div>
             <div class="text">
-                <h1>{{miPorfolio.nombre + " "+ miPorfolio.apellido}}</h1>
-                <h2>{{miPorfolio.descripcion}}</h2>
-                <p>{{miPorfolio.frase | uppercase}}</p>
+                <h1>{{perfil.nombre + " "+ perfil.apellido}}</h1>
+                <h2>{{perfil.residencia}}</h2>
+                <p>{{perfil.email}}</p>
                 </div>
+                <div class="image">                               
+                    <img [src]="perfil.image_perfil" alt="image_perfil" class="perfil">
+                </div>
+    
+        </div>
+        
     </div>
 </section>
 

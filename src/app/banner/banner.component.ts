@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { PorfolioService } from '../servicios/porfolio.service';
+import PersonaService from '../service/persona.service';
+import { TokenService } from '../service/token.service';
+import Persona from '../model/persona';
 
 
 @Component({
@@ -8,17 +10,41 @@ import { PorfolioService } from '../servicios/porfolio.service';
   styleUrls: ['./banner.component.css']
 })
 export class BannerComponent implements OnInit {
-  miPorfolio: any;
+
+  //inicializa como una lista porque lo tengo cargado como lista al metodo para que recupere el perfil.
+  personas: Persona[];
+
  
+  constructor(public personaService: PersonaService, private tokenService: TokenService) { }
 
-  constructor(private datosPorfolio:PorfolioService) {}
+  isLogged: boolean = false;
 
+  ngOnInit(): void {
+    this.personaService.getPersonas().subscribe(data => {this.personas = data});
+
+    if(this.tokenService.getToken()) {
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
+  }
+
+  traerPerfil(id:number){
+    this.personaService.getPersona(id).subscribe(data => {
+      this.personaService.perfilPersona = data;
+    });
+  }
+
+  //constructor con Json
+  //constructor(private datosPorfolio:PorfolioService) {}
+  //ng con json
+  /*
   ngOnInit(): void{
     this.datosPorfolio.obtenerDatos().subscribe(data =>{
     this.miPorfolio = data;
     });
   }
-
+ */
 
 
 }

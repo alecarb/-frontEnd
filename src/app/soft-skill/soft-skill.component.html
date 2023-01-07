@@ -1,0 +1,14 @@
+<div class="seccion sombra ">
+    <div class="container">
+        <div class="col">
+        <div class="row">
+            <h3 class="col seccion sombra"> {{titulo}}</h3>
+            <div *ngFor="let skill of softSkillList ">
+            <label for="file">{{skill.habilidad + ":"}}</label>
+            <progress id="file" max="100" [value]="skill.porcentaje"></progress>
+            {{skill.porcentaje + "%"}}
+            <br>
+            </div>
+        </div>
+    </div>
+</div>

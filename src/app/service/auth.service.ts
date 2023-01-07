@@ -4,8 +4,6 @@ import { NuevoUsuario } from '../model/nuevo-usuario';
 import { Observable, tap } from 'rxjs';
 import { JwtDto } from '../model/jwt-dto';
 import { LoginUsuario } from '../model/login-usuario';
-import { catchError } from 'rxjs/operators';
-import { of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +11,7 @@ import { of } from 'rxjs';
 export class AuthService {
   private readonly authUrl = 'http://localhost:8080/auth';
   isLoggedIn = false;
+  
 
   constructor(private http: HttpClient) { }
 

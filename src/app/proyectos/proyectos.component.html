@@ -2,10 +2,12 @@
     <section class="seccion sombra">
         <div class="logo-seccion">
             <h3 class="seccion sombra">{{titulo}}</h3>
-            <a [href]="miPorfolio.red3"><img [src]="miPorfolio.imgProyecto" [alt]="titulo" class="img"></a>
-            <p class="click">Click en Octogato</p>
+            <div *ngFor="let proyecto of proyectoList">
+            <a [href]="proyecto.proyecto"><img [src]="proyecto.image_proy" [alt]="titulo" class="img"></a>
+            <p class="click">Click en Imgen</p>
+            <div class="text-seccion">
+                <p>{{proyecto.descripcion}}</p>
+            </div>
         </div>
-        <div class="text-seccion">
-            <p>{{miPorfolio.proyectos}}</p>
         </div>
     

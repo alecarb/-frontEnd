@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { SeccionesComponent } from '../secciones/secciones.component';
 
 const TOKEN_KEY = 'AuthToken'
 const USERNAME_KEY = 'AuthUsername'
@@ -46,11 +45,12 @@ export class TokenService {
     return this.roles;
   }
   public logOut() {
-    
     console.log('Token antes de eliminar: ', sessionStorage.getItem(TOKEN_KEY));
+    window.sessionStorage.removeItem(TOKEN_KEY);
+
     window.sessionStorage.clear();
     console.log('Token después de eliminar: ', sessionStorage.getItem(TOKEN_KEY));
-
+    window.location.reload();
   }
 
 

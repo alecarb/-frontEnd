@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PorfolioService } from '../servicios/porfolio.service';
+import { AcercaMiService } from '../service/acerca-mi.service';
 
 @Component({
   selector: 'app-acerca-de-mi',
@@ -8,14 +8,17 @@ import { PorfolioService } from '../servicios/porfolio.service';
 })
 export class AcercaDeMiComponent implements OnInit {
   titulo: string = "Acerca de Mi";
-  parrafoList:any;
-  miPorfolio:any;
+  descripcionesList:any;
 
-  constructor(private datosPorfolio:PorfolioService) { }
+ 
+
+  constructor(private datosPorfolio:AcercaMiService) { }
 
   ngOnInit(): void {
-    this.datosPorfolio.obtenerDatos().subscribe(data=>{
-      this.parrafoList=data.parrafo;
+    this.datosPorfolio.getAcercaMi().subscribe(data=>{
+      this.descripcionesList=data;
+      
+     console.log(data);
     });
   }
 
