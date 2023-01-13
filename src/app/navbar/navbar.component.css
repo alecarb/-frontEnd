@@ -7,38 +7,6 @@ nav{
  .ul{
     list-style: none;
  }
- .fa-brands.fa-linkedin-in:hover { 
-   color:#3c39f7;
-   -webkit-transform: scale(1.3);
-   -moz-transform: scale(1.3);
-   -ms-transform: scale(1.3);
-   -o-transform: scale(1.3);
-   transform: scale(1.3); 
- }
- .fa-brands.fa-github:hover{
-   color:#32ac94;
-   -webkit-transform: scale(1.3);
-   -moz-transform: scale(1.3);
-   -ms-transform: scale(1.3);
-   -o-transform: scale(1.3);
-   transform: scale(1.3); 
- }
- .fa-brands.fa-instagram:hover{
-   color:#a84fd1;
-   -webkit-transform: scale(1.3);
-   -moz-transform: scale(1.3);
-   -ms-transform: scale(1.3);
-   -o-transform: scale(1.3);
-   transform: scale(1.3); 
- }
- .fa-solid.fa-user-lock.text-white:hover{
-   color:#f34a37;
-   -webkit-transform: scale(1.3);
-   -moz-transform: scale(1.3);
-   -ms-transform: scale(1.3);
-   -o-transform: scale(1.3);
-   transform: scale(1.3); 
- }
  .list-group{
    --bs-list-group-bg: black;
    
@@ -54,8 +22,3 @@ nav{
   
 }
 
-.btn{
-  background-color: black;
-  border-radius: 20px;
-  color: white;
-}

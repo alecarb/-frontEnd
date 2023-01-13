@@ -7,6 +7,7 @@ import { AcercaMiService } from 'src/app/service/acerca-mi.service';
   selector: 'app-dashboard-acerca-mi',
   templateUrl: './dashboard-acerca-mi.component.html',
   styleUrls: ['./dashboard-acerca-mi.component.css']
+  
 })
 export class DashboardAcercaMiComponent implements OnInit {
   titulo: string = "Aceca de mi";

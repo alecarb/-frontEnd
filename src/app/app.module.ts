@@ -21,7 +21,6 @@ import { Error404Component } from './error404/error404.component';
 import { RegistroComponent } from './registro/registro.component';
 import { AcercaDeMiComponent } from './acerca-de-mi/acerca-de-mi.component';
 import { ExperienciaLaboralComponent } from './experiencia-laboral/experiencia-laboral.component';
-import { interceptorProvider } from './service/interceptor-service';
 import { SoftSkillComponent } from './soft-skill/soft-skill.component';
 import { AuthGuard } from './auth.guard';
 import { DashboardExpLabComponent } from './dashboard/dashboard-exp-lab/dashboard-exp-lab.component';
@@ -102,7 +101,6 @@ import { DashboardAcercaMiComponent } from './dashboard/dashboard-acerca-mi/dash
    
   ],
   providers:[
-    interceptorProvider,
     AuthGuard
   ],
 
