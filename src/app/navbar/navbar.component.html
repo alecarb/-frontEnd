@@ -1,12 +1,20 @@
-<nav class="navbar navbar-expand-sm" *ngIf="navbar.length > 0">
+<nav class="navbar navbar-expand-sm" *ngIf="navbar">
   <div class="container-fluid">
     <a class="navbar-brand " title="ArgProg">
       <img [src]="navbar[0].logo" class="img_logo" alt="argProg">
     </a>
     <ul class="list-group list-group-horizontal">
-      <li class="list-group-item"><a [href]="navbar[0].instagram"><i class="fa-brands fa-instagram fa-2x text-white"></i></a></li>
-      <li class="list-group-item"><a [href]="navbar[0].linkedin"><i class="fa-brands fa-linkedin-in fa-2x text-white"></i></a></li>
-      <li class="list-group-item"><a [href]="navbar[0].github"><i class="fa-brands fa-github fa-2x text-white"></i></a></li>
+      <li class="list-group-item" *ngFor="let red of navbar">
+        <a [href]="red.red" *ngIf="red.nombre === 'Instagram'">
+          <i class="fa-brands fa-instagram fa-2x text-white"></i>
+        </a>
+        <a [href]="red.red" *ngIf="red.nombre === 'Linkedin'">
+          <i class="fa-brands fa-linkedin-in fa-2x text-white"></i>
+        </a>
+        <a [href]="red.red" *ngIf="red.nombre === 'Github'">
+          <i class="fa-brands fa-github fa-2x text-white"></i>
+        </a>
+      </li>
       <li class="list-group-item">
         <button type="button" class="login-btn"  (click)="login()" *ngIf="!isLoggedIn">INGRESO</button>
         <button type="button" (click)="onLogOut()" *ngIf="isLoggedIn">CERRAR SESION</button>

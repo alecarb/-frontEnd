@@ -1,0 +1,17 @@
+<div class="seccion">
+    <div class="titulo">{{titulo}}
+       <button [routerLink]="['hardSkillnew/new']" type="button" class="btn btn-secondary">Nueva Hard Skill</button>
+    </div>
+    <table class="sombra">
+        <tbody  *ngFor="let hardSkill of hardSkillList; index as i">
+        <tr class="trabajo-fila">
+            <td>{{i + 1}}</td>
+            <td>{{hardSkill.habilidad}}</td>
+            <td>{{hardSkill.porcentaje}}</td>
+            <td><button routerLink="hardSkilledit/{{hardSkill.id}}" type="button" class="btn btn-primary" >Editar</button></td>
+            <td><button (click)="onDelete(hardSkill.id)" type="button" class="btn btn-danger">Eliminar</button></td>
+        </tr>
+    </table>
+</div>
+
+

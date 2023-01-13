@@ -1,0 +1,14 @@
+<div *ngIf="hardSkill">
+    <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+      <div class="form-group">
+        <label for="habilidad">Habilidad</label>
+        <input type="text" class="form-control" id="habilidad" [(ngModel)]="hardSkill.habilidad" required name="habilidad">
+      </div>
+      <div class="form-group">
+        <label for="porcentaje">Porcentaje</label>
+        <input type="text" class="form-control" id="porcentaje" [(ngModel)]="hardSkill.porcentaje" required name="porcentaje">
+      </div>
+      <button type="submit" class="btn btn-primary">Actualizar</button>
+    </form>
+  </div> 
+

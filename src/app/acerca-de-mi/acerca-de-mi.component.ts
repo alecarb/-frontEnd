@@ -15,7 +15,7 @@ export class AcercaDeMiComponent implements OnInit {
   constructor(private datosPorfolio:AcercaMiService) { }
 
   ngOnInit(): void {
-    this.datosPorfolio.getAcercaMi().subscribe(data=>{
+    this.datosPorfolio.getAcercaMis().subscribe(data=>{
       this.descripcionesList=data;
       
      console.log(data);

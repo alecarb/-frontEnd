@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
   export class SoftSkillService {
   
-    private baseURL = 'http://localhost:8080/softSkill/';
+  private baseURL = 'http://localhost:8080/softSkill/';
   constructor(private httpClient: HttpClient) { }
   
   public getSoftSkill(id: number): Observable<SoftSkill> {

@@ -1,0 +1,7 @@
+<form #form="ngForm" (ngSubmit)="onCreate(form)">
+    <div class="form-group">
+      <label for="descripcion">Descripcion</label>
+      <input type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="acercaMi.descripcion">
+    </div>
+    <button type="submit" class="btn btn-primary">Crear
+  

@@ -1,0 +1,19 @@
+
+<div class="seccion">
+    <div class="titulo">{{titulo}}
+       <button [routerLink]="['educacionnew/new']" type="button" class="btn btn-secondary">Nueva Educacion</button>
+    </div>
+    <table class="sombra">
+        <tbody *ngFor="let educacion of educacionList; index as i">
+        <tr class="trabajo-fila">
+            <td>{{i + 1}}</td>
+            <td>{{educacion.institucion}}</td>
+            <td>{{educacion.titulo}}</td>
+            <td><button routerLink="educacionedit/{{educacion.id}}" type="button" class="btn btn-primary" >Editar</button></td>
+            <td><button (click)="onDelete(educacion.id)" type="button" class="btn btn-danger">Eliminar</button></td>
+        </tr>
+    </table>
+</div>
+
+  
+

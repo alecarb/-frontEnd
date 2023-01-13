@@ -1,0 +1,13 @@
+<div *ngIf="navbar">
+    <form (ngSubmit)="onUpdate()" #formData="ngForm">
+        <div class="form-group">
+        <label for="nombre">Nombre de red social</label>
+        <input type="text" class="form-control" id="nombre" [(ngModel)]="navbar.nombre" required name="nombre">
+        </div>
+        <div class="form-group">
+        <label for="red">Link de red social</label>
+        <input type="text" class="form-control" id="red" [(ngModel)]="navbar.red" required name="red">
+        </div>
+        <button type="submit" class="btn btn-primary">Actualizar</button>
+    </form>
+</div>

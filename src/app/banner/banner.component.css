@@ -20,7 +20,7 @@
  }
  .image{
     display:flex;
-    justify-content: start;
+    justify-content: flex-start;
     width: 10.5rem;
     height: 10rem;
  }

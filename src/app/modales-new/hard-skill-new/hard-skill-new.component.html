@@ -1,0 +1,14 @@
+<form #form="ngForm" (ngSubmit)="onCreate(form)">
+    <div class="form-group">
+      <label for="habilidad">Habilidad</label>
+      <input type="text" class="form-control" id="habilidad" name="habilidad" [(ngModel)]="hardSkill.habilidad">
+    </div>
+    <div class="form-group">
+      <label for="porcentaje">Porcentaje</label>
+      <input type="text" class="form-control" id="porcentaje" name="porcentaje" [(ngModel)]="hardSkill.porcentaje">
+    </div>
+    <button type="submit" class="btn btn-primary">Crear</button>
+  </form>
+
+  
+

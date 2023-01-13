@@ -11,23 +11,23 @@ private baseUrl = 'http://localhost:8080/hardSkill';
 
 constructor(private http: HttpClient) { }
 
-getHardSkill(id: number) {
+public getHardSkill(id: number) {
 return this.http.get<HardSkill>(`${this.baseUrl}/ver/${id}`);
 }
 
-getHardSkillsList() {
+public getHardSkillsList() {
 return this.http.get<HardSkill[]>(`${this.baseUrl}/list`);
 }
 
-createHardSkill(skill: HardSkill) {
-return this.http.post(`${this.baseUrl}/new/skill`, skill);
+public createHardSkill(hardSkill: HardSkill) {
+return this.http.post(`${this.baseUrl}/new/skill`, hardSkill);
 }
 
-updateHardSkill(id: number, value: any) {
-return this.http.put(`${this.baseUrl}/edit/${id}`, value);
+public updateHardSkill(hardSkill: HardSkill) {
+return this.http.put(`${this.baseUrl}/edit/${hardSkill.id}`, hardSkill);
 }
 
-deleteHardSkill(id: number) {
+public deleteHardSkill(id: number) {
 return this.http.delete(`${this.baseUrl}/delete/${id}`);
 }
 }

@@ -1,0 +1,15 @@
+<div class="seccion">
+    <div class="titulo">{{titulo}}
+       <button [routerLink]="['navbarnew/new']" type="button" class="btn btn-secondary">Nueva Red</button>
+    </div>
+    <table class="sombra">
+        <tbody  *ngFor="let red of navabarList; index as i">
+            <tr class="trabajo-fila" *ngIf="red.nombre.toLowerCase() !== 'argentina programa'">
+                <td>{{i}}</td>
+                <td>{{red.nombre}}</td>
+                <td>{{red.red}}</td>
+                <td><button routerLink="navbaredit/{{red.id}}" type="button" class="btn btn-primary" >Editar</button></td>
+                <td><button (click)="onDelete(red.id)" type="button" class="btn btn-danger">Eliminar</button></td>
+            </tr>
+    </table>
+</div>

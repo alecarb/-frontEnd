@@ -10,16 +10,21 @@ export class AcercaMiService {
   private baseURL = 'http://localhost:8080/about/';
   constructor(private httpClient: HttpClient) {}
 
-  public getAcercaMi(): Observable<AcercaMi> {
-    return this.httpClient.get<AcercaMi>(`${this.baseURL}list`);
+  public getAcercaMi(id: number): Observable<AcercaMi> {
+    return this.httpClient.get<AcercaMi>(`${this.baseURL}ver/${id}`);
   }
 
-  public createAcercaMi(acercaMi: AcercaMi): Observable<AcercaMi> {
-    return this.httpClient.post<AcercaMi>(`${this.baseURL}new`, acercaMi);
+
+  public getAcercaMis(): Observable<AcercaMi[]> {
+    return this.httpClient.get<AcercaMi[]>(`${this.baseURL}list`);
   }
 
-  public updateAcercaMi(acercaMi: AcercaMi): Observable<AcercaMi> {
-    return this.httpClient.put<AcercaMi>(`${this.baseURL}edit/${acercaMi.id}`, acercaMi);
+  public createAcercaMi(acerca_mi: AcercaMi): Observable<AcercaMi> {
+    return this.httpClient.post<AcercaMi>(`${this.baseURL}new/about`, acerca_mi);
+  }
+
+  public updateAcercaMi(acerca_mi: AcercaMi): Observable<AcercaMi> {
+    return this.httpClient.put<AcercaMi>(`${this.baseURL}edit/${acerca_mi.id}`, acerca_mi);
   }
 
   public deleteAcercaMi(id: number): Observable<AcercaMi> {

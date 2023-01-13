@@ -1,0 +1,12 @@
+<form #form="ngForm" (ngSubmit)="onCreate(form)">
+    <div class="form-group">
+      <label for="nombre">Nombre de Red Social</label>
+      <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="navbar.nombre">
+    </div>
+    <div class="form-group">
+      <label for="red">Link de Reed Social</label>
+      <input type="text" class="form-control" id="red" name="red" [(ngModel)]="navbar.red">
+    </div>
+    <button type="submit" class="btn btn-primary">Crear</button>
+  </form>
+

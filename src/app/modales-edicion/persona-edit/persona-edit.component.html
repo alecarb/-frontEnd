@@ -1,0 +1,37 @@
+<div class="seccion">
+    <div class="titulo">Editar Persona</div>
+    <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+        <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" [(ngModel)]="persona.nombre" name="nombre" required>
+        </div>
+        <div class="form-group">
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" [(ngModel)]="persona.apellido" name="apellido" required>
+        </div>
+        <div class="form-group">
+            <label for="telefono">Telefono:</label>
+            <input type="text" id="telefono" [(ngModel)]="persona.telefono" name="telefono" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="text" id="email" [(ngModel)]="persona.email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="residencia">Residencia:</label>
+            <input type="text" id="residencia" [(ngModel)]="persona.residencia" name="residencia" required>
+        </div>
+        <div class="form-group">
+            <label for="dni">DNI:</label>
+            <input type="text" id="dni" [(ngModel)]="persona.dni" name="dni" (change)="validateDNI()" required>
+            <p *ngIf="error" class="text-danger">El DNI debe ingresarse sin puntos ni espacios, solo números seguidos.</p>
+        </div>
+        <div class="form-group">
+            <label for="image_perfil">Imagen de perfil:</label>
+            <input type="text" id="image_perfil" [(ngModel)]="persona.image_perfil" name="image_perfil" (change)="validateImage()">
+            <p *ngIf="imageError" class="text-danger">La Imagen de perfil debe ser un link válido.</p>
+            <p *ngIf="imageEmpty" class="text-danger">El campo Imagen de perfil es requerido.</p>
+        </div>
+                <button type="submit" class="btn btn-primary">Actualizar</button>
+    </form>
+</div>

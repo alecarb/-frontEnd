@@ -10,12 +10,15 @@ import { Navbar } from '../model/navbar';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  navbar: Navbar [] = [];
+  navbar: Navbar [];
+ 
   isDashboard = false; 
   isLoggedIn = false;
 
   constructor(private datosPorfolio:NavbarService, private router: Router,
      private tokenService: TokenService) { } 
+
+  
 
   ngOnInit(): void { 
     this.datosPorfolio.getNavbar().subscribe(data =>{this.navbar = data; 

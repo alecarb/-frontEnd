@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { NuevoUsuario } from '../model/nuevo-usuario';
+import { AuthService } from '../service/auth.service';
 
 @Component({
   selector: 'app-registro',
@@ -8,53 +10,32 @@ import { Router } from '@angular/router';
   styleUrls: ['./registro.component.css']
 })
 export class RegistroComponent implements OnInit {
-  form: FormGroup = new FormGroup({
-  nombre: new FormControl(''),
-  apellido: new FormControl(''),
-  dni: new FormControl(''),
-  domicilio: new FormControl(''),
-  telefono: new FormControl(''),
-  email: new FormControl(''),
-  password: new FormControl(''),
-  confirmPassword: new FormControl('')
-  });
-  submitted = false; //submitted/enviado
-  //Inyectar el constructor en el formBuilder
-  constructor(private formBuilder: FormBuilder, private router: Router) { 
-  
-    //Creamos el grupo de controles para el formulario de registro
-    this.form=this.formBuilder.group({
-    nombre:['',[Validators.required]],
-    apellido:['',[Validators.required]],
-    dni:['',[Validators.required]],
-    domicilio:['',[Validators.required]],
-    telefono:['',[Validators.required]],
-    email:['',[Validators.required, Validators.email]],
-    password:['',[Validators.required, Validators.minLength(8)]]
-    });
-    }
+  form: FormGroup;
+  submitted = false;
 
-  ngOnInit(): void {}
+  constructor(private formBuilder: FormBuilder, private authService: AuthService, private router: Router) { }  
+
+  
+  ngOnInit(): void {
+    // Creamos el grupo de controles para el formulario de registro
+    this.form = this.formBuilder.group({
+      nombre: ['', [Validators.required]],
+      nombreUsuario: ['', [Validators.required]],
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(8)]],
+      authorities: ['', Validators.required]
+    });
+  }
 
   get nombre() {
     return this.form.get('nombre');
   }
-  
-  get apellido() {
-    return this.form.get('apellido');
+
+
+  get nombreUsuario() {
+    return this.form.get('nombreUsuario');
   }
   
-  get dni() {
-    return this.form.get('dni');
-  }
-  
-  get domicilio() {
-    return this.form.get('domicilio');
-  }
-  
-  get telefono() {
-    return this.form.get('telefono');
-  }
   
   get email() {
     return this.form.get('email');
@@ -63,32 +44,40 @@ export class RegistroComponent implements OnInit {
   get password() {
     return this.form.get('password');
   }
-  
-  get confirmPassword() {
-    return this.form.get('confirmPassword');
-  }
-  
-  onEnviar(event: Event){
-    // Detenemos la propagación o ejecución del compotamiento submit de un form
-    event.preventDefault; 
- 
-    if (this.form.valid){
-      // Llamamos a nuestro servicio para enviar los datos al servidor
-      // También podríamos ejecutar alguna lógica extra
-      alert("¡Usuario registrado!")
-      this.router.navigate(['/dashboard']) //esta linea de codigo redirecciona al dashboard. Se importa el modulo Router y se agrrega al constructor.
 
-    }else{
-      // Corremos todas las validaciones para que se ejecuten los mensajes de error en el template     
-      this.form.markAllAsTouched(); 
-      alert("Los datos ingresados no son validos")
-      
+  onEnviar(event: Event) {
+    event.preventDefault();
+  
+    if (this.form.valid) {
+      // Creamos un nuevo usuario con los datos del formulario 
+      const newUser = new NuevoUsuario(
+        this.form.get('nombre').value,
+        this.form.get('nombreUsuario').value,
+        this.form.get('email').value,
+        this.form.get('password').value,
+        this.form.get('authorities').value
+
+        
+      );
+  
+      // Llamamos al método del servicio para crear un nuevo usuario
+      this.authService.createUser(newUser).subscribe(
+        res => {
+          // Si el usuario se ha creado correctamente, mostramos un mensaje de éxito y redirigimos al dashboard
+          alert("¡Usuario registrado!");
+          this.router.navigate(['/dashboard']);
+        },
+        error => {
+          // Si ha ocurrido algún error, mostramos un mensaje de error
+          console.log(error);
+          alert("Error al registrar usuario");
+        }
+      );
+    } else {
+      // Corremos todas las validaciones para que se ejecuten los mensajes de error en el template
+      this.submitted = true;
     }
- 
   }
+    
 
-
-  
 }
-  
-  

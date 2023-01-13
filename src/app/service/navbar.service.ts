@@ -15,12 +15,23 @@ export class NavbarService {
     return this.http.get<Navbar[]>(`${this.baseURL}list`);
   }
 
+  public getNavbarById(id: number){
+    return this.http.get<Navbar>(`${this.baseURL}ver/${id}`);
+  }
+  /*
+public getHardSkill(id: number) {
+return this.http.get<HardSkill>(`${this.baseUrl}/ver/${id}`);
+}
+
+  */
+
   public createNavbar(navbar: Navbar): Observable<Navbar> {
     return this.http.post<Navbar>(`${this.baseURL}new/navbar`, navbar);
   }
 
   public updateNavbar(navbar: Navbar): Observable<Navbar> {
     return this.http.put<Navbar>(`${this.baseURL}edit/${navbar.id}`, navbar);
+
   }
 
   public deleteNavbar(id: number): Observable<Navbar> {

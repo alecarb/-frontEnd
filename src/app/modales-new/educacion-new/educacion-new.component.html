@@ -1,0 +1,19 @@
+<form #form="ngForm" (ngSubmit)="onCreate(form)">
+    <div class="form-group">
+      <label for="institucion">Institucion</label>
+      <input type="text" class="form-control" id="institucion" name="institucion" [(ngModel)]="educacion.institucion">
+    </div>
+    <div class="form-group">
+      <label for="titulo">Titulo</label>
+      <input type="text" class="form-control" id="titulo" name="titulo" [(ngModel)]="educacion.titulo">
+    </div>
+    <div class="form-group">
+      <label for="fecha_inicio">Fecha de inicio</label>
+      <input type="text" class="form-control" id="fecha_inicio" name="fecha_inicio" [(ngModel)]="educacion.fecha_inicio">
+    </div>
+    <div class="form-group">
+      <label for="fecha_fin">Fecha de finalización</label>
+      <input type="text" class="form-control" id="fecha_fin" name="fecha_fin" [(ngModel)]="educacion.fecha_fin">
+    </div>
+    <button type="submit" class="btn btn-primary">Crear
+  

@@ -17,7 +17,7 @@ export class DashboardExpLabComponent implements OnInit {
   ngOnInit(): void {
     this.datosPorfolio.getTrabajos().subscribe(data =>{
       this.trabajoList = data;
-      console.log(data);
+      //console.log(data);
     });  }
   
     onDelete(id: number) {
@@ -31,6 +31,7 @@ export class DashboardExpLabComponent implements OnInit {
           });
         });
       });
+      
     }
 
     

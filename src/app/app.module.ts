@@ -27,6 +27,24 @@ import { AuthGuard } from './auth.guard';
 import { DashboardExpLabComponent } from './dashboard/dashboard-exp-lab/dashboard-exp-lab.component';
 import { TrabajoEditComponent } from './modales-edicion/trabajo-edit/trabajo-edit.component';
 import { TrabajoNewComponent } from './modales-new/trabajo-new/trabajo-new.component';
+import { DashboardEducacionComponent } from './dashboard/dashboard-educacion/dashboard-educacion.component';
+import { EducacionEditComponent } from './modales-edicion/educacion-edit/educacion-edit.component';
+import { EducacionNewComponent } from './modales-new/educacion-new/educacion-new.component';
+import { DashboardSoftSkillsComponent } from './dashboard/dashboard-soft-skills/dashboard-soft-skills.component';
+import { SoftSkillsEditComponent } from './modales-edicion/soft-skill-edit/soft-skill-edit.component';
+import { SoftSkillsNewComponent } from './modales-new/soft-skill-new/soft-skill-new.component';
+import { DashboardHardSkillsComponent } from './dashboard/dashboard-hard-skills/dashboard-hard-skills/dashboard-hard-skills.component';
+import { HardSkillsNewComponent } from './modales-new/hard-skill-new/hard-skill-new.component';
+import { HardSkillsEditComponent } from './modales-edicion/hard-skill-edit/hard-skill-edit.component';
+import { NavbarEditComponent } from './modales-edicion/navbar-edit/navbar-edit.component';
+import { NavbarNewComponent } from './modales-new/navbar-new/navbar-new.component';
+import { DashboardNavbarComponent } from './dashboard/dashboard-navbar/dashboard-navbar.component';
+import { DashboardPersonaComponent } from './dashboard/dashboard-persona/dashboard-persona.component';
+import { PersonaEditComponent } from './modales-edicion/persona-edit/persona-edit.component';
+import { PersonaNewComponent } from './modales-new/persona-new/persona-new.component';
+import { AcercaMiNewComponent } from './modales-new/acerca-mi-new/acerca-mi-new.component';
+import { AcercaMiEditComponent } from './modales-edicion/acerca-mi-edit/acerca-mi-edit.component';
+import { DashboardAcercaMiComponent } from './dashboard/dashboard-acerca-mi/dashboard-acerca-mi.component';
 
 
 @NgModule({
@@ -50,6 +68,24 @@ import { TrabajoNewComponent } from './modales-new/trabajo-new/trabajo-new.compo
     DashboardExpLabComponent,
     TrabajoEditComponent,
     TrabajoNewComponent,
+    DashboardEducacionComponent,
+    EducacionEditComponent,
+    EducacionNewComponent,
+    DashboardSoftSkillsComponent,
+    SoftSkillsEditComponent,
+    SoftSkillsNewComponent,
+    DashboardHardSkillsComponent,
+    HardSkillsNewComponent,
+    HardSkillsEditComponent,
+    NavbarEditComponent,
+    NavbarNewComponent,
+    DashboardNavbarComponent,
+    DashboardPersonaComponent,
+    PersonaEditComponent,
+    PersonaNewComponent,
+    AcercaMiNewComponent,
+    AcercaMiEditComponent,
+    DashboardAcercaMiComponent,
 
 
    

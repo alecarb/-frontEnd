@@ -1,0 +1,13 @@
+<div class="seccion">
+    <div class="titulo">{{titulo}}
+       <button [routerLink]="['acerca-minew/new']" type="button" class="btn btn-secondary">Nueva Texto</button>
+    </div>
+    <table class="sombra">
+        <tbody *ngFor="let acerca of acercaList">
+        <tr class="trabajo-fila">
+            <td>{{acerca.descripcion}}</td>
+            <td><button routerLink="acerca-miedit/{{acerca.id}}" type="button" class="btn btn-primary" >Editar</button></td>
+            <td><button (click)="onDelete(acerca.id)" type="button" class="btn btn-danger">Eliminar</button></td>
+        </tr>
+    </table>
+</div>
