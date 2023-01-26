@@ -29,9 +29,6 @@ export class NavbarNewComponent implements OnInit {
     this.navbar.red = form.value.red;
     this.navbar.logo = form.value.logo;
     this.navbar.nombre = form.value.nombre;
-    
-    
-
     this.datosPorfolio.createNavbar(this.navbar).subscribe(nuevared => {
       console.log("Red creada");
       alert('Red creada');

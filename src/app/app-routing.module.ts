@@ -26,7 +26,7 @@ const routes: Routes = [
   //constantes de rutas en orden de navegacion
   {path: '', component: IndexComponent},
   {path:'login', component: LoginComponent},
-  {path:'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
+  {path:'dashboard', component: DashboardComponent, canActivate :[AuthGuard] },
   {path: 'dashboard/trabajoedit/:id', component: TrabajoEditComponent },
   {path: 'dashboard/trabajonew/new', component: TrabajoNewComponent},
   {path: 'dashboard/educacionedit/:id', component: EducacionEditComponent},
@@ -50,5 +50,6 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
+  
 })
 export class AppRoutingModule { }

@@ -24,7 +24,11 @@ export class AuthService {
   }
 
   public login(loginUser: LoginUsuario): Observable<JwtDto> {
-    return this.http.post<JwtDto>(`${this.baseURL}/auth/login`, loginUser)
+    console.log('Iniciando llamado al servicio AuthService:', loginUser);
+    return this.http.post<JwtDto>(`${this.baseURL}/auth/login`, loginUser).
+    pipe(tap(res=>{
+      console.log('Respuesta del servidor:', res);
+    }))
     
   };
 

@@ -45,8 +45,9 @@ onLogOut(): void {
 login(){
   this.router.navigate(['/login'])
 }
+/*
 dashboard(){
   this.router.navigate(['/dashboard'])
 }
-
+*/
 }

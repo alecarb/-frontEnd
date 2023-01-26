@@ -1,6 +1,8 @@
 <div class="seccion">
     <div class="titulo">{{titulo}}
+        <!--
        <button [routerLink]="['personanew/new']" type="button" class="btn btn-secondary">Nueva Persona</button>
+        -->
     </div>
     <table class="sombra">
         <thead class="texto-negrita">
@@ -22,7 +24,9 @@
                 <td>{{persona.dni}}</td>
                 <td><i class="fa-regular fa-image"></i></td>
                 <td><button routerLink="personaedit/{{persona.id}}" type="button" class="btn btn-primary" >Editar</button></td>
+                <!--
                 <td><button (click)="onDelete(persona.id)" type="button" class="btn btn-danger">Eliminar</button></td>
+                -->
             </tr>
     </table>
 </div>

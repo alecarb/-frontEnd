@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 
 
@@ -44,6 +44,7 @@ import { PersonaNewComponent } from './modales-new/persona-new/persona-new.compo
 import { AcercaMiNewComponent } from './modales-new/acerca-mi-new/acerca-mi-new.component';
 import { AcercaMiEditComponent } from './modales-edicion/acerca-mi-edit/acerca-mi-edit.component';
 import { DashboardAcercaMiComponent } from './dashboard/dashboard-acerca-mi/dashboard-acerca-mi.component';
+import { InterceptorService } from './service/interceptor-service';
 
 
 @NgModule({
@@ -101,7 +102,13 @@ import { DashboardAcercaMiComponent } from './dashboard/dashboard-acerca-mi/dash
    
   ],
   providers:[
-    AuthGuard
+    AuthGuard, {
+      provide: HTTP_INTERCEPTORS,
+      useClass: InterceptorService,
+      multi: true
+
+    }
+   
   ],
 
   bootstrap: [AppComponent],

@@ -25,7 +25,6 @@ export class TrabajoNewComponent implements OnInit {
       this.trabajo.id = this.trabajoList[this.trabajoList.length - 1].id + 1;
     }
     this.trabajo.empresa = form.value.empresa;
-    //this.trabajo.image_trab = form.value.image_trab;
     this.trabajo.puesto = form.value.puesto;
     this.trabajo.text_descrip = form.value.text_descrip;
     this.trabajo.fecha_inicio = form.value.fecha_inicio;

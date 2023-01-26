@@ -23,7 +23,7 @@ export class TrabajoEditComponent implements OnInit {
   onUpdate() {
     // Envia la petición de actualización al backend
     this.datosPorfolio.updateTrabajo(this.trabajo).subscribe(data => {
-      //console.log(data);
+      console.log(data);
       alert('Trabajo actualizado!');
       this.router.navigate(['/dashboard']);
     });

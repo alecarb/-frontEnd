@@ -25,7 +25,7 @@ export class TrabajoService {
   }
 
   public createTrabajo(trabajo: Trabajo): Observable<Trabajo> {
-    return this.httpClient.post<Trabajo>(`${this.baseURL}/trabajo/new/trabajo`, trabajo);
+    return this.httpClient.post<Trabajo>(`${this.baseURL}/trabajo/new/trabajo/`, trabajo);
   }
 
   public updateTrabajo(trabajo: Trabajo): Observable<Trabajo> {

@@ -18,7 +18,7 @@
       <li class="list-group-item">
         <button type="button" class="login-btn"  (click)="login()" *ngIf="!isLoggedIn">INGRESO</button>
         <button type="button" (click)="onLogOut()" *ngIf="isLoggedIn">CERRAR SESION</button>
-        <button type="button"(click)="dashboard()" *ngIf="isLoggedIn && !isDashboard" >DASHBOARD</button>
+        <button type="button" routerLink="/dashboard" *ngIf="isLoggedIn && !isDashboard" >DASHBOARD</button>
       </li>
     </ul>
   </div>

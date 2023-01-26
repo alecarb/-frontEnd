@@ -21,12 +21,6 @@ export class NavbarService {
   public getNavbarById(id: number){
     return this.http.get<Navbar>(`${this.baseURL}/navbar/ver/${id}`);
   }
-  /*
-public getHardSkill(id: number) {
-return this.http.get<HardSkill>(`${this.baseUrl}/ver/${id}`);
-}
-
-  */
 
   public createNavbar(navbar: Navbar): Observable<Navbar> {
     return this.http.post<Navbar>(`${this.baseURL}/navbar/new/navbar`, navbar);
