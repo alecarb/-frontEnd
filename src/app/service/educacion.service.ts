@@ -23,7 +23,7 @@ export class EducacionService {
   }
 
   public createEducacion(educacion: Educacion): Observable<Educacion> {
-    return this.httpClient.post<Educacion>(`${this.baseURL}/educacion/new/educacion`, educacion);
+    return this.httpClient.post<Educacion>(`${this.baseURL}/educacion/new/educacion/1`, educacion);
   }
 
   public updateEducacion(educacion: Educacion): Observable<Educacion> {

@@ -23,7 +23,7 @@ export class NavbarService {
   }
 
   public createNavbar(navbar: Navbar): Observable<Navbar> {
-    return this.http.post<Navbar>(`${this.baseURL}/navbar/new/navbar`, navbar);
+    return this.http.post<Navbar>(`${this.baseURL}/navbar/new/navbar/1`, navbar);
   }
 
   public updateNavbar(navbar: Navbar): Observable<Navbar> {

@@ -22,7 +22,7 @@ import { environment } from 'src/environments/environment';
   }
   
   public createSoftSkill(softSkill: SoftSkill): Observable<SoftSkill> {
-  return this.httpClient.post<SoftSkill>(`${this.baseURL}/softSkill/new/skill`, softSkill);
+  return this.httpClient.post<SoftSkill>(`${this.baseURL}/softSkill/new/skill/1`, softSkill);
   }
   
   public updateSoftSkill(softSkill: SoftSkill): Observable<SoftSkill> {

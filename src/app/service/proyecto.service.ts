@@ -22,7 +22,7 @@ export class ProyectoService {
   }
 
   public createProyecto(proyecto: Proyecto): Observable<Proyecto> {
-    return this.httpClient.post<Proyecto>(`${this.baseURL}/proyecto/new/proyecto`, proyecto);
+    return this.httpClient.post<Proyecto>(`${this.baseURL}/proyecto/new/proyecto/1`, proyecto);
   }
 
   public updateProyecto(proyecto: Proyecto): Observable<Proyecto> {

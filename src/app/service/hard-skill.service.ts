@@ -23,7 +23,7 @@ return this.http.get<HardSkill[]>(`${this.baseURL}/hardSkill/list`);
 }
 
 public createHardSkill(hardSkill: HardSkill) {
-return this.http.post(`${this.baseURL}/hardSkill/new/skill`, hardSkill);
+return this.http.post(`${this.baseURL}/hardSkill/new/skill/1`, hardSkill);
 }
 
 public updateHardSkill(hardSkill: HardSkill) {

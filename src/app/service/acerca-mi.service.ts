@@ -22,7 +22,8 @@ export class AcercaMiService {
   }
 
   public createAcercaMi(acerca_mi: AcercaMi): Observable<AcercaMi> {
-    return this.httpClient.post<AcercaMi>(`${this.baseURL}/about/new/about/`, acerca_mi);
+  
+    return this.httpClient.post<AcercaMi>(`${this.baseURL}/about/new/about/1`, acerca_mi);
   }
 
   public updateAcercaMi(acerca_mi: AcercaMi): Observable<AcercaMi> {

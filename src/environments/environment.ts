@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
- baseURL: 'https://alecarbargprog.onrender.com'
-  //baseURL: 'http://localhost:8080'
+  baseURL: 'https://alecarbargprog.onrender.com'
+ // baseURL: 'http://localhost:8080'
   };
 
 /*
